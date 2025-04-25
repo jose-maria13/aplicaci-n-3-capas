@@ -8,7 +8,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "- Uso de verbos HTTP: `GET`, `POST`, `PUT`, `DELETE`.\r - Las rutas representan recursos (`/productos`).\r - Las respuestas están en formato JSON.\r - Separación de capas: presentación (rutas), lógica de negocio (controladores) y acceso a datos (modelo).\r - Manejo correcto de códigos de estado HTTP (`200`, `201`, `400`, `404`, `204`).",
   "dependencies": {
     "express": "^5.1.0"
   }

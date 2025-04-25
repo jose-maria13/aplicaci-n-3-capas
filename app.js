@@ -3,14 +3,15 @@ const app = express();
 const port = 3000;
 const controller = require('./controllers/productoController');
 
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get('/', controller.mostrarHTML);
-app.get('/productos', controller.listarProductos);
-app.post('/productos', controller.crearProducto);
-app.post('/eliminar/:nombre', controller.eliminarProducto);
+// Endpoints REST
+app.get('/productos', controller.listarProductos);        
+app.post('/productos', controller.crearProducto);         
+app.get('/productos/:id', controller.obtenerProducto);    
+app.put('/productos/:id', controller.actualizarProducto); 
+app.delete('/productos/:id', controller.eliminarProducto); 
 
 app.listen(port, () => {
-  console.log(`Servidor corriendo en http://localhost:${port}`);
+  console.log(`API REST corriendo en http://localhost:${port}`);
 });
